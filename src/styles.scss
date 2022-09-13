@@ -1,93 +1,72 @@
-//
-// Fontawesome
-//
+// Import Fontawesome
 $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts/";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
-// Pre-state grayscale colors used in other variables
-$gray-800: #343a40;
-// Override Bootstrap default state colors
-//$primary: #bd5d38;
+// Import Bootstrap functions
+@import "~bootstrap/scss/functions";
 
-// Override Bootstrap typography variables
-//$font-family-base: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-//"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-//"Segoe UI Symbol", "Noto Color Emoji";
+// Overrides of Bootstrap default variables
+@import "scss/bs-variable-overrides";
 
-//$headings-font-family: "Saira Extra Condensed", -apple-system,
-//BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
-//"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// Import Bootstrap variables
+@import "~bootstrap/scss/variables";
 
-//$headings-font-weight: 700;
-//
-//$headings-color: $gray-800;
-//
-//$h1-font-size: 6rem;
-//$h2-font-size: 3.5rem;
-//$h3-font-size: 2rem;
+// Overrides of Bootstrap default variables
+//@import "scss/bs-maps-overrides";
 
-// Spacing variable to set the sidebar base width
-$sidebar-base-width: 17rem;
-// Spacing variable to add padding to the top of the body element that matches the height of the navbar
-$navbar-base-height: 3.375rem;
+// Import Bootstrap maps
+@import "~bootstrap/scss/maps";
 
+// Import rest of Bootstrap's required modules
+@import "~bootstrap/scss/mixins";
 
+// Import Bootstrap utilities
+@import "~bootstrap/scss/utilities";
 
-// Import Bootstrap
-@import "~bootstrap/scss/bootstrap.scss";
+// Import Bootstrap layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+@import "~bootstrap/scss/placeholders";
 
+// Import Bootstrap helpers
+@import "~bootstrap/scss/helpers";
 
-body {
-  padding-top: $navbar-base-height;
-  color: $gray-600;
-}
-
-@include media-breakpoint-up(lg) {
-  body {
-    padding-top: 0;
-    padding-left: $sidebar-base-width;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-}
-
-h1 {
-  line-height: 1;
-}
-
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
-
-.subheading {
-  font-family: $headings-font-family;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.5rem;
-}
+// Utilities
+@import "~bootstrap/scss/utilities/api";
 
 
-
-.btn-fab {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
-}
-
-// Components
+// Custom Components
 @import "./scss/sidenav.scss";
 
-// Sections
-@import "./scss/resume-section.scss";
+// Custom SCSS
+//@import "./scss/_custom.scss";

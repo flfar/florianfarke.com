@@ -8,29 +8,30 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Meta -->
-    <meta name="description" content="Personal website of Florian M. Farke. PhD student interested in usable security and privacy."/>
+    <meta name="description"
+          content="Personal website of Florian M. Farke. PhD candidate researching usable security and privacy."/>
     <meta name="keywords" content="about me, education, contact"/>
     <meta name="author" content="Florian M. Farke">
 
     <!-- Performance -->
-<!--    <link rel="preload" as="font" href="webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin="anonymous">-->
-<!--    <link rel="preload" as="font" href="webfonts/fa-regular-400.woff2" type="font/woff2" crossorigin="anonymous">-->
-<!--    <link rel="preload" as="font" href="webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin="anonymous">-->
-<!--    <link rel="preload" as="font" href="webfonts/quicksand-v28-latin-ext_latin-500.woff2" type="font/woff2" crossorigin="anonymous">-->
-<!--    <link rel="preload" as="font" href="webfonts/quicksand-v28-latin-ext_latin-700.woff2" type="font/woff2" crossorigin="anonymous">-->
-<!--    <link rel="preload" as="font" href="webfonts/metrophobic-v17-latin-ext_latin-regular.woff2" type="font/woff2" crossorigin="anonymous">-->
+    <!--    <link rel="preload" as="font" href="webfonts/fa-brands-400.woff2" type="font/woff2" crossorigin="anonymous">-->
+    <!--    <link rel="preload" as="font" href="webfonts/fa-regular-400.woff2" type="font/woff2" crossorigin="anonymous">-->
+    <!--    <link rel="preload" as="font" href="webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin="anonymous">-->
+    <!--    <link rel="preload" as="font" href="webfonts/quicksand-v28-latin-ext_latin-500.woff2" type="font/woff2" crossorigin="anonymous">-->
+    <!--    <link rel="preload" as="font" href="webfonts/quicksand-v28-latin-ext_latin-700.woff2" type="font/woff2" crossorigin="anonymous">-->
+    <!--    <link rel="preload" as="font" href="webfonts/metrophobic-v17-latin-ext_latin-regular.woff2" type="font/woff2" crossorigin="anonymous">-->
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Personal website of Florian Farke.">
-    <meta name="twitter:description" content="PhD student interested in usable security and privacy.">
+    <meta name="twitter:description" content="PhD candidate researching usable security and privacy.">
     <meta name="twitter:image" content="https://florianfarke.com/assets/img/twittercard.jpg">
 
     <!-- Facebook Card -->
     <meta property="og:url" content="https://florianfarke.com">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Personal website of Florian Farke.">
-    <meta property="og:description" content="PhD student interested in usable security and privacy.">
+    <meta property="og:description" content="PhD candidate researching usable security and privacy.">
     <meta property="og:image" content="https://florianfarke.com/assets/img/twittercard.jpg">
 
     <!-- Style -->
@@ -41,66 +42,195 @@
 </head>
 
 
-<body id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Florian M. Farke</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Picture of Florian Farke" /></span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#under-construction">Under Construction</a></li>
-        </ul>
+<body>
+
+<!--<header class="navbar navbar-dark bg-dark navbar-expand-xl d-xl-none sticky-top">-->
+<!--    <nav class="container-fluid" aria-label="Main navigation">-->
+<!--        <button class="btn btn-close-white" type="button" data-bs-toggle="offcanvas"-->
+<!--                data-bs-target="#side-canvas"-->
+<!--                aria-controls="side-canvas" aria-label="Toggle side bar">-->
+<!--            <span class="visually-hidden">Toggle side bar</span>-->
+<!--            <i class="fas fa-bars"></i>-->
+<!--        </button>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<!-- Sidenav Toggle Button -->
+<div class="position-fixed ff-overlay d-flex d-xl-none align-items-center w-100 px-3 py-2">
+    <button class="btn btn-secondary rounded-circle shadow-sm" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#side-canvas"
+            aria-controls="side-canvas" aria-label="Toggle side bar">
+        <span class="visually-hidden">Toggle side bar</span>
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<!--&lt;!&ndash; Back to Top Button &ndash;&gt;-->
+<!--<div class="position-fixed bottom-0 ff-overlay d-flex justify-content-end align-items-center w-100 px-3 py-2">-->
+<!--    <button class="btn btn-primary rounded-circle" type="button"-->
+<!--            aria-label="Back to top">-->
+<!--        <span class="visually-hidden">Back to top</span>-->
+<!--        <i class="fas fa-arrow-up"></i>-->
+<!--    </button>-->
+<!--</div>-->
+
+
+<aside class="offcanvas-xl flex-column ff-sidenav offcanvas-start text-bg-dark" id="side-canvas"
+       data-bs-scroll="true">
+
+    <div class="offcanvas-header position-fixed">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                data-bs-target="#side-canvas" aria-label="Close"></button>
     </div>
-</nav>
 
+    <div class="offcanvas-body container-fluid">
+        <div class="row flex-column flex-nowrap m-0 g-3 h-100">
+            <div class="col-auto m-0 align-self-center px-5">
+                <img class="img-fluid rounded-circle border border-secondary"
+                     style="--bs-border-width: .5rem"
+                     src="assets/img/profile.jpg" alt="Picture of Florian Farke"/>
+            </div>
 
-<!-- Page Content-->
-<div class="container-fluid p-0">
-    <!-- About-->
-    <section class="resume-section" id="about">
-        <div class="resume-section-content">
+            <div class="col-auto align-self-center fs-2 lead">
+                Florian M. Farke
+            </div>
+
+            <div class="col-auto align-self-center">
+                <div class="row gx-2">
+                    <div class="col-auto">
+                        <a class="btn btn-secondary rounded-circle"
+                           href="https://scholar.google.com/citations?user=BBO_Zx4AAAAJ" data-bs-toggle="tooltip"
+                           data-bs-placement="top" title="Google Scholar">
+                            <span class="visually-hidden">Google Scholar</span>
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-secondary rounded-circle" href="https://github.com/flfar"
+                           data-bs-toggle="tooltip" data-bs-placement="top" title="Github">
+                            <span class="visually-hidden">Github</span>
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-secondary rounded-circle" href="https://www.linkedin.com/in/florian-farke"
+                           data-bs-toggle="tooltip" data-bs-placement="top" title="Linked In">
+                            <span class="visually-hidden">Linked In</span><i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <a class="btn btn-secondary rounded-circle" href="https://www.xing.com/profile/Florian_Farke"
+                           data-bs-toggle="tooltip" data-bs-placement="top" title="Xing">
+                            <span class="visually-hidden">Xing</span>
+                            <i class="fab fa-xing"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-auto">
+                <nav class="navbar navbar-dark" id="sidenav">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">
+                                <span><i class="fas fa-user"></i></span>
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">
+                                <span><i class="fas fa-graduation-cap"></i></span>
+                                Education
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#publications">
+                                <span><i class="fas fa-paperclip"></i></span>
+                                Publications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#teaching">
+                                <span><i class="fas fa-chalkboard-teacher"></i></span>
+                                Teaching
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#academic-service">
+                                <span><i class="fas fa-flask"></i></span>
+                                Academic Service
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#under-construction">
+                                <span><i class="fas fa-person-digging"></i></span>
+                                Under Construction
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col m-0"></div>
+
+            <div class="col-auto">
+                <div class="navbar navbar-dark">
+                    <div class="navbar-nav">
+                        <a class="nav-link fs-6" href="">
+                            Privacy & Legal Notice
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<div class="container-xl ps-xl-5 ff-sidenav">
+
+    <!-- Hero-->
+    <section class="row" id="hero">
+        <div class="col py-5">
             <h1 class="display-1 mb-0">
-                Florian M.
-                <span class="text-primary">Farke</span>
+                Florian M. Farke
             </h1>
             <div class="lead fs-3">
                 Usable Security and Privacy Section · Leibniz University Hannover ·
                 <a href="mailto:florian.farke@itsec.uni-hannover.de">florian.farke@itsec.uni-hannover.de</a>
             </div>
-            <p class="lead mb-5">
-                I'm a Ph.D. student at the Ruhr University Bochum in Germany and a member of the Usable Security & Privacy Section at the Leibniz University Hannover in Germany.
-                My advisor is Prof. Dr. Markus Dürmuth.
-                My research covers computer security and human-computer interaction (HCI) with a focus on usable security and privacy.
-            </p>
-            <div class="row gap-2">
-                <a class="btn btn-secondary btn-lg btn-fab rounded-circle" href="https://scholar.google.com/citations?user=BBO_Zx4AAAAJ" data-bs-toggle="tooltip" data-bs-placement="top" title="Google Scholar">
-                    <span class="visually-hidden">Google Scholar</span>
-                    <i class="fab fa-google"></i>
-                </a>
-                <a class="btn btn-secondary btn-lg btn-fab rounded-circle" href="https://github.com/flfar" data-bs-toggle="tooltip" data-bs-placement="top" title="Github">
-                    <span class="visually-hidden">Github</span>
-                    <i class="fab fa-github"></i>
-                </a>
-                <a class="btn btn-secondary btn-lg btn-fab rounded-circle" href="https://www.linkedin.com/in/florian-farke" data-bs-toggle="tooltip" data-bs-placement="top" title="Linked In">
-                    <span class="visually-hidden">Linked In</span><i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="btn btn-secondary btn-lg btn-fab rounded-circle" href="https://www.xing.com/profile/Florian_Farke" data-bs-toggle="tooltip" data-bs-placement="top" title="Xing">
-                    <span class="visually-hidden">Xing</span>
-                    <i class="fab fa-xing"></i>
-                </a>
-            </div>
         </div>
     </section>
-    <hr class="m-0"/>
-    <!-- Education -->
-    <section class="resume-section" id="education">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Education</h2>
+
+    <!-- Page Content-->
+    <main class="row row-cols-1 gy-5" data-bs-spy="scroll" data-bs-target="#sidenav">
+        <!-- About-->
+        <section class="col" id="about">
+            <h2 class="display-5 border-bottom">
+                <span><i class="fas fa-user"></i></span>
+                About
+            </h2>
+            <p class="lead">
+                I'm a Ph.D. candidate at the <a href="https://informatik.rub.de/en/">Ruhr University Bochum</a>
+                and member of the <a href="https://hgi.rub.de/en/">Horst Görtz Institute for IT Security</a>.
+                Currently, I'm working as a research assistant at the
+                <a href="https://www.itsec.uni-hannover.de/en/usec/">Privacy Section</a> of the
+                <a href="https://www.uni-hannover.de/en/">Leibniz University Hannover</a>.
+                I'm also part of the <a href="https://gwusec.seas.gwu.edu/">Usable Security and Privacy Lab</a>
+                of the <a href="https://www.gwu.edu/">George Washington University</a>.
+                My advisor is <a href="https://www.itsec.uni-hannover.de/en/usec/team/prof-dr-markus-duermuth/"
+                >Prof. Dr. Markus Dürmuth</a>.
+                My research interests lie in the intersection of information security, human-computer
+                interaction (HCI), and privacy.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="col" id="education">
+            <h2 class="display-5 border-bottom">
+                <span><i class="fas fa-graduation-cap"></i></span>
+                Education
+            </h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Ph.D. Student</h3>
@@ -125,23 +255,36 @@
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">September 2011 – March 2015</span></div>
             </div>
-        </div>
-    </section>
-    <!-- Under Construction -->
-    <section class="resume-section" id="under-construction">
-        <div class="resume-section-content">
-            <h2 class="display-4 mb-5">Under Construction</h2>
+        </section>
+
+        <!-- Under Construction -->
+        <section class="col" id="under-construction">
+            <h2 class="display-5 border-bottom">
+                <span class="fs-1"><i class="fas fa-person-digging"></i></span>
+                Under Construction
+            </h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <div class="lead mb-3 fs-3">
-                        <span class="fs-1"><i class="fa-solid fa-person-digging"></i></span>
                         This page is under construction.
                         More is coming soon.
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </div>
+
+
+<footer class="bg-light">
+    <div class="container ff-sidenav ps-xl-5 py-5">
+        <div class="row row-cols-auto justify-content-end">
+            <div class="col">
+                2022 - Florian Farke
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
