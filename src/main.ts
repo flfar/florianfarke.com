@@ -1,5 +1,6 @@
 import {Offcanvas, Tooltip} from 'bootstrap';
 
+
 window.addEventListener('DOMContentLoaded', () => {
     // Resize fix for side-nav
     window.matchMedia('(min-width: 1200px)')

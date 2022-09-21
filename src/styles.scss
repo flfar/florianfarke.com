@@ -14,7 +14,7 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts/";
 @import "~bootstrap/scss/variables";
 
 // Overrides of Bootstrap default variables
-//@import "scss/bs-maps-overrides";
+@import "scss/bs-maps-overrides";
 
 // Import Bootstrap maps
 @import "~bootstrap/scss/maps";
@@ -69,4 +69,4 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts/";
 @import "./scss/sidenav.scss";
 
 // Custom SCSS
-//@import "./scss/_custom.scss";
+@import "./scss/_custom.scss";
