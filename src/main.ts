@@ -14,4 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // Initialize tooltips
     Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         .map(tooltipTriggerEl => new Tooltip(tooltipTriggerEl));
+
+
+    document.getElementById('lastUpdated')?.appendChild(
+        document.createTextNode('Last updated \u00B7 ' + new Date(document.lastModified).toLocaleDateString())
+    )
 });

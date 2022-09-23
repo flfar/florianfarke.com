@@ -24,7 +24,6 @@
     &.container {
       @include media-breakpoint-up(xl) {
             margin-left: $offcanvas-horizontal-width;
-            width: unset;
         }
     }
 }
